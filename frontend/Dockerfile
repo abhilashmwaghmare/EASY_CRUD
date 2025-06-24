@@ -8,11 +8,14 @@ RUN npm install && npm run build
 
 RUN apk update && apk add apache2
 
-# dist/index.html --> /var/www/html/ 
+# dist/index.html --> /var/www/html/
+
+RUN rm -f /var/www/localhost/htdocs/* 
+RUN cp -rf dist/* /var/www/localhost/htdocs/
 
 EXPOSE 80
 
-CMD ["apachectl", "-D", "FOREGROUND"]
+CMD ["httpd", "-D", "FOREGROUND"]
 
 # ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
 
