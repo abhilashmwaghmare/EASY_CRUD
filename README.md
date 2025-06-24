@@ -51,8 +51,8 @@ EXIT;
 ```
 
 ## 4. You will need Database Credentials to Connect Backend with Database
-1. DB_HOST
-2. DB_USER
-3. DB_PASS
-4. DB_PORT
-5. DB_NAME
+1. DB_HOST = 172.17.0.2
+2. DB_USER = root
+3. DB_PASS = redhat
+4. DB_PORT = 3306
+5. DB_NAME = student_db
