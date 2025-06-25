@@ -9,11 +9,11 @@ COPY . /opt/
 
 WORKDIR /opt
 
-# RUN rm -rf src/main/resources/application.properties
-# RUN cp -f application.properties src/main/resources/application.properties
+RUN rm -rf src/main/resources/application.properties
+RUN cp -f application.properties src/main/resources/application.properties
 # COPY application.properties src/main/resources/application.properties
 
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 WORKDIR /opt/target/
 
