@@ -19,7 +19,7 @@ spec:
           image: shubhamkalsait1/easy-crud-backend:latest
           ports:  
             - containerPort: 8080
-          resource:  
+          resources:  
             requests:
               cpu: 200m
               memory: 100M
