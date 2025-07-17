@@ -14,7 +14,7 @@ spec:
     driver: ebs.csi.aws.com
     volumeHandle: vol-0cadc0868fb9c5749
     fsType: ext4
-    volumeAttribute: 
+    volumeAttributes: 
       storage.kubernetes.io/csiProvisionerIdentity: static
   nodeAffinity:
     required:
