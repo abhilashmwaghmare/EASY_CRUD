@@ -14,7 +14,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-#              name: student-app-frontend-service  ## Service name changed
               name: student-app-frontend-svc
               port: 
                 number: 80 

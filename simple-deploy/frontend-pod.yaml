@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-app
+  labels:
+    app: frontend-app
+spec:
+  containers:
+    - name: frontend-app
+      image: shubhamkalsait1/easy-frontend:latest
+      ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend-svc
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: frontend-app
+  type: LoadBalancer
