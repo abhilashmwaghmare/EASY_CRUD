@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: student-app
+  labels: 
+    app: student-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: student-app
+  template:
+    metadata:
+      labels:
+        app: student-app
+    spec: 
+      containers:
+        - name: student-app-container
+          image: shubhamkalsait1/easy-crud-backend:latest
+          ports:  
+            - containerPort: 8080
+          resources:  
+            requests:
+              cpu: 200m
+              memory: 100M
+            limits:
+              cpu: 500m
+              memory: 200M      

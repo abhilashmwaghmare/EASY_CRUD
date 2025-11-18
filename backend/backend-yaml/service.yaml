@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-app-svc
+  labels:
+    app: student-app
+spec: 
+  selector:
+    app: student-app
+  ports:
+    - name: java
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+  type: NodePort
