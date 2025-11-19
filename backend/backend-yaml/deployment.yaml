@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
         - name: student-app-container
-          image: 
+          image: abhilash0104/easycrudbackend:latest
           ports:  
             - containerPort: 8080
           resources:  
