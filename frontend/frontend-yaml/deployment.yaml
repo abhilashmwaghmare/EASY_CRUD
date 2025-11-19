@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
         - name: student-app-container
-          image: shubhamkalsait1/easy-crud-frontend:latest
+          image: 
           ports:  
             - containerPort: 80
           resources:  
