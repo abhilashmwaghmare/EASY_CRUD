@@ -10,6 +10,13 @@ spec:
       image: shubhamkalsait1/easy-frontend:latest
       ports:
         - containerPort: 80
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "100m"
+        limits:
+          memory: "512Mi"
+          cpu: "500m"
 ---
 kind: Service
 apiVersion: v1

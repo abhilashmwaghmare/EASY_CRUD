@@ -15,6 +15,13 @@ spec:
               value: cloudblitz
             - name: MYSQL_DATABASE
               value: student_db
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
